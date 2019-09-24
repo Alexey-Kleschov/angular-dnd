@@ -1,8 +1,17 @@
-<div class="main" 
-  cdkDrop 
+<div 
+  class="main" 
+  cdkDrop
+  [cdkDropData]="newItems"
+
   (cdkDropDropped)="dropped($event)"
   (cdkDropEntered)="entered($event)" 
   (cdkDropExited)="exited($event)"
 >
 </div>
-<div class="drag" cdkDrag></div>
+
+<div 
+  class="drag" 
+  cdkDrag
+  *ngFor="let item of newItems" [cdkDragData]="item"
+>
+</div>
