@@ -1,2 +1,8 @@
-<div class="main"></div>
+<div class="main" 
+  cdkDrop 
+  (cdkDropDropped)="dropped($event)"
+  (cdkDropEntered)="entered($event)" 
+  (cdkDropExited)="exited($event)"
+>
+</div>
 <div class="drag" cdkDrag></div>
