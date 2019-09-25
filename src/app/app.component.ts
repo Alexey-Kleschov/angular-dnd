@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CdkDragDrop, moveItemInArray, transferArrayItem, CdkDragEnter, CdkDragExit, CdkDragStart, CdkDrag, CdkDrop } from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray, transferArrayItem, CdkDragEnter, CdkDragExit, CdkDragStart, CdkDrag } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'my-app',
@@ -13,7 +13,17 @@ newItems = [
     'Item 1'  
   ]
 
-  dropped(event: CdkDragDrop<string[]>) {
+  public todo = [
+  { title: 'Get to work', dateAdded: new Date().toString() },
+  { title: 'Pick up groceries', dateAdded: new Date().toString() },
+  ];
+
+  public done = [
+  { title: 'Get up', dateAdded: new Date().toString() },
+  { title: 'Brush teeth', dateAdded: new Date().toString() },
+];
+
+  drop(event:any) {
     console.log('dropped');
   }
 

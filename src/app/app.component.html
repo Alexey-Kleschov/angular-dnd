@@ -1,17 +1,25 @@
-<div 
-  class="main" 
-  cdkDrop
-  [cdkDropData]="newItems"
-
-  (cdkDropDropped)="dropped($event)"
-  (cdkDropEntered)="entered($event)" 
-  (cdkDropExited)="exited($event)"
+<cdk-drop 
+  class="main"
+  #first
+  
+  [connectedTo]="[second]"
+ (cdkDropDropped)="drop($event)"
+  cdkDrop 
+  [data]="todo"
 >
-</div>
+  <div class="drag" cdkDrag  *ngFor="let item of todo" ></div>
+</cdk-drop >
 
-<div 
-  class="drag" 
-  cdkDrag
-  *ngFor="let item of newItems" [cdkDragData]="item"
+<cdk-drop
+ [data]="done"
+  class="main"
+  #second
+  [connectedTo]="[first]"
+  (dropped)="drop($event)"
 >
-</div>
+  <div class="drag" cdkDrag  *ngFor="let item of done" ></div>
+</cdk-drop>
+
+
+
+
