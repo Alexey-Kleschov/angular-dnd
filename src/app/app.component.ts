@@ -27,11 +27,11 @@ newItems = [
     console.log('dropped');
   }
 
-  entered(event: CdkDragEnter<string[]>) {
+  entered(event:any) {
     console.log('entered');
   }
 
-  exited(event: CdkDragExit<string[]>) {
+  exited(event:any) {
     console.log('exited');
   }
 }
