@@ -8,10 +8,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem, CdkDragEnter, CdkDragE
 })
 export class AppComponent{
 
-newItems = [
-    'Item 0',
-    'Item 1'  
-  ]
+
 
   public todo = [
   { title: 'Get to work', dateAdded: new Date().toString() },
@@ -24,6 +21,7 @@ newItems = [
 ];
 
   drop(event:any) {
+    console.log(event);
     console.log('dropped');
   }
 
@@ -33,5 +31,10 @@ newItems = [
 
   exited(event:any) {
     console.log('exited');
+  }
+
+  badgeDrop(event:any) {
+    console.log('badgeDrop');
+    console.log(event);
   }
 }
