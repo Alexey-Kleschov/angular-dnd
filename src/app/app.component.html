@@ -6,14 +6,15 @@
   (cdkDropListDropped)="drop($event)"
   (cdkDropListEntered)="entered($event)"
   (cdkDropListExited)="exited($event)"
-(cdkDragDropped)="badgeDrop($event)"
+
 > 
 <app-badge
-
+    
+  
     (cdkDragDropped)="badgeDrop($event)"
   ></app-badge>
 
-  <!-- <div class="drag"  cdkDrag [cdkDragData]="todo"></div> -->
+  <!-- <div class="drag" (cdkDragDropped)="badgeDrop($event)"  cdkDrag [cdkDragData]="todo"></div> -->
 
 </div >
 
