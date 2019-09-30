@@ -7,7 +7,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem, CdkDragEnter, CdkDragE
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent{
-
+eventBadge: any;
 
 
   public todo = [
@@ -36,5 +36,12 @@ export class AppComponent{
   badgeDrop(event:any) {
     console.log('badgeDrop');
     console.log(event);
+  }
+  getDrop(event:any){
+    this.eventBadge = event;
+    console.log(this.eventBadge);
+  }
+  getData(event:any) {
+    console.log(event)
   }
 }

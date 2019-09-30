@@ -11,9 +11,10 @@
 <app-badge
     cdkDrag
     [eventBadge] = "eventBadge"
-    
-  
-    (cdkDragDropped)="badgeDrop($event)"
+    [cdkDragData]="todo"
+    (cdkDragDropped)="getDrop($event)"
+    (badge)="badgeDrop($event)"
+    (newItemsData)="getData($event)"
   ></app-badge>
 
   <!-- <div class="drag" (cdkDragDropped)="badgeDrop($event)"  cdkDrag [cdkDragData]="todo"></div> -->
