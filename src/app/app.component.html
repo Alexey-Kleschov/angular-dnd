@@ -2,7 +2,7 @@
   class="main"
   #first="cdkDropList" 
   cdkDropList 
-  [cdkDropListConnectedTo]="[second]"
+  [cdkDropListConnectedTo]="[todoes]"
   (cdkDropListDropped)="drop($event)"
   (cdkDropListEntered)="entered($event)"
   (cdkDropListExited)="exited($event)" 
@@ -22,12 +22,17 @@
 </div >
 
 <div
+
+
+#todoes
   class="main"
   #second="cdkDropList" 
   cdkDropList 
   [cdkDropListConnectedTo]="[first]"
 >  
 </div >
+
+
 
 
 
