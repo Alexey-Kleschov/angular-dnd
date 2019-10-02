@@ -1,36 +1,32 @@
-<div
-  class="main"
-  #first="cdkDropList" 
-  cdkDropList 
-  [cdkDropListConnectedTo]="[todoes]"
-  (cdkDropListDropped)="drop($event)"
-  (cdkDropListEntered)="entered($event)"
-  (cdkDropListExited)="exited($event)" 
+<div cdkDropListGroup>
+  <div
+    class="main"
+    cdkDropList
+    (cdkDropListDropped)="drop($event)"
+    (cdkDropListEntered)="entered($event)"
+    (cdkDropListExited)="exited($event)" 
 
-> 
-<app-badge
-    cdkDrag
-    [eventBadge] = "eventBadge"
-    [cdkDragData]="todo"
-    (cdkDragDropped)="getDrop($event)"
-    (badge)="badgeDrop($event)"
-    (newItemsData)="getData($event)"
+  > 
+  <app-badge
+      cdkDrag
+      [eventBadge] = "eventBadge"
+      [cdkDragData]="todo"
+      (cdkDragDropped)="getDrop($event)"
+      (badge)="badgeDrop($event)"
+      (newItemsData)="getData($event)"
   ></app-badge>
 
-  <!-- <div class="drag" (cdkDragDropped)="badgeDrop($event)"  cdkDrag [cdkDragData]="todo"></div> -->
+    <!-- <div class="drag" (cdkDragDropped)="badgeDrop($event)"  cdkDrag [cdkDragData]="todo"></div> -->
 
-</div >
-
-<div
-
-
-#todoes
-  class="main"
-  #second="cdkDropList" 
-  cdkDropList 
-  [cdkDropListConnectedTo]="[first]"
->  
-</div >
+  </div >
+      <div
+        class="main"
+        cdkDropList 
+        (cdkDropListEntered)="entered($event)"
+        *ngFor="let i of [1,2,3]"
+      >  
+      </div >
+</div>
 
 
 
