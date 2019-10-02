@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem, CdkDragEnter, CdkDragExit, CdkDragStart, CdkDrag } from '@angular/cdk/drag-drop';
 
 @Component({
@@ -6,9 +6,14 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem, CdkDragEnter, CdkDragE
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
-export class AppComponent{
+export class AppComponent implements OnInit{
 eventBadge: any;
 
+  ngOnInit() {
+    setTimeout( () => {
+      this.isShowSec = true; 
+    }, 5000);
+  }
 
   public todo = [
   { title: 'Get to work', dateAdded: new Date().toString() },
@@ -19,6 +24,9 @@ eventBadge: any;
   { title: 'Get up', dateAdded: new Date().toString() },
   { title: 'Brush teeth', dateAdded: new Date().toString() },
 ];
+
+isShowSec = false;
+
 
   drop(event:any) {
     console.log(event);

@@ -2,8 +2,8 @@
   <div
     class="main"
     cdkDropList
-    #mainCase="cdkDropList"
-    [cdkDropListConnectedTo]="[dropCase]"
+  
+    
     (cdkDropListDropped)="drop($event)"
     (cdkDropListEntered)="entered($event)"
     (cdkDropListExited)="exited($event)" 
@@ -21,25 +21,27 @@
 
     <!-- <div class="drag" (cdkDragDropped)="badgeDrop($event)"  cdkDrag [cdkDragData]="todo"></div> -->
 
-  <div
+  <!-- <div
     class="inside"
     cdkDropList 
-    #dropCase="cdkDropList"
-    [cdkDropListConnectedTo]="[mainCase]"
+  
+   
     (cdkDropListEntered)="dragEnter2()" 
     (cdkDropListDropped)="fuck()"
   >
 
-  </div>
+  </div> -->
 
-  </div >
-      <!-- <div
+<div
         class="main"
         cdkDropList 
         (cdkDropListEntered)="entered($event)"
         *ngFor="let i of [1,2,3]"
+        (cdkDropListDropped)="fuck()"
       >  
-      </div > -->
+    </div > 
+  </div >
+    
 </div>
 
 
