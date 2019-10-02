@@ -38,10 +38,17 @@ eventBadge: any;
     console.log(event);
   }
   getDrop(event:any){
+    console.log('GET DROPPPPP');
     this.eventBadge = event;
     console.log(this.eventBadge);
   }
   getData(event:any) {
     console.log(event)
+  }
+  fuck() {
+    console.log('fuck');
+  }
+  dragEnter2(){
+    console.log('drag in sec block');
   }
 }
