@@ -30,8 +30,8 @@ isShowSec = false;
 
 
   drop(event:any) {
-    console.log(event);
-    console.log('dropped');
+    // console.log(event);
+    console.log('main dropped');
   }
 
   entered(event:any) {
@@ -44,7 +44,7 @@ isShowSec = false;
 
   badgeDrop(event:any) {
     console.log('badgeDrop');
-    console.log(event);
+    // console.log(event);
   }
   getDrop(event:any){
     console.log('GET DROPPPPP');
@@ -52,7 +52,7 @@ isShowSec = false;
     console.log(this.eventBadge);
   }
   getData(event:any) {
-    console.log(event)
+    // console.log(event)
   }
   fuck() {
     console.log('fuck');

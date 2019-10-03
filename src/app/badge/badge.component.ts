@@ -12,11 +12,11 @@ export class BadgeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log("badge init");
+    // console.log("badge init");
   }
 
   ngOnChanges() {
-    console.log("i change");
+    // console.log("i change");
     this.badgeDrop();
   }
 
@@ -26,7 +26,7 @@ newItems = [
   ]
 
   public badgeDrop() {
-    console.log("badgeDrop inside");
+    // console.log("badgeDrop inside");
     this.newItemsData.emit(this.newItems);
   }
 

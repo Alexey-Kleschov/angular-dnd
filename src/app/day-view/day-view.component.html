@@ -1,7 +1,8 @@
   <div
     class="main"
     cdkDropList
-  
+    #main="cdkDropList"
+    [cdkDropListConnectedTo]="[inside]"
     
     (cdkDropListDropped)="drop($event)"
     (cdkDropListEntered)="entered($event)"
@@ -21,12 +22,13 @@
   
       
     <div
-       
+       #inside="cdkDropList"
+        [cdkDropListConnectedTo]="[main]"
         class="inside"
         cdkDropList 
         (cdkDropListEntered)="entered($event)"
      
-        (cdkDragDropped)="fuck()"
+        (cdkDropListDropped)="fuck()"
       >  
     </div > 
     
