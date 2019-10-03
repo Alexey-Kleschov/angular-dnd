@@ -1,0 +1,35 @@
+  <div
+    class="main"
+    cdkDropList
+  
+    
+    (cdkDropListDropped)="drop($event)"
+    (cdkDropListEntered)="entered($event)"
+    (cdkDropListExited)="exited($event)" 
+
+  > 
+  <app-badge
+      cdkDrag
+      *ngFor="let i of [1,2,3]"
+      [eventBadge] = "eventBadge"
+      [cdkDragData]="todo"
+      (cdkDragDropped)="getDrop($event)"
+      (badge)="badgeDrop($event)"
+      (newItemsData)="getData($event)"
+  ></app-badge>
+  <div style="clear:both"></div>
+  
+      
+    <div
+       
+        class="inside"
+        cdkDropList 
+        (cdkDropListEntered)="entered($event)"
+     
+        (cdkDragDropped)="fuck()"
+      >  
+    </div > 
+    
+  </div >
+  <div style="clear:both"></div>
+    
