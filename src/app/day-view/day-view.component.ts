@@ -39,7 +39,7 @@ isShowSec = false;
   }
 
   exited(event:any) {
-    console.log('exited');
+    // console.log('exited');
   }
 
   badgeDrop(event:any) {
@@ -59,6 +59,9 @@ isShowSec = false;
   }
   dragEnter2(){
     console.log('drag in sec block');
+  }
+  enteredInside() {
+    console.log('enter inside');
   }
 
 }
