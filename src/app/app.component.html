@@ -1,8 +1,9 @@
-<div cdkDropListGroup>
+
   <div
     class="main"
     cdkDropList
-  
+    #main="cdkDropList"
+    [cdkDropListConnectedTo]="[inside]"
     
     (cdkDropListDropped)="drop($event)"
     (cdkDropListEntered)="entered($event)"
@@ -32,17 +33,19 @@
 
   </div> -->
 
-<div
-        class="main"
+    <div
+        #inside="cdkDropList"
+        [cdkDropListConnectedTo]="[main]"
+        class="inside"
         cdkDropList 
         (cdkDropListEntered)="entered($event)"
-        *ngFor="let i of [1,2,3]"
+     
         (cdkDropListDropped)="fuck()"
       >  
     </div > 
   </div >
     
-</div>
+
 
 
 
