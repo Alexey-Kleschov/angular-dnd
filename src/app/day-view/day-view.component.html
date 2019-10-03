@@ -3,7 +3,7 @@
     cdkDropList
     #main="cdkDropList"
     [cdkDropListConnectedTo]="[inside]"
-    
+    [cdkDropListEnterPredicate]="predicate"
     (cdkDropListDropped)="drop($event)"
     (cdkDropListEntered)="entered($event)"
     (cdkDropListExited)="exited($event)" 
@@ -21,17 +21,19 @@
   <div style="clear:both"></div>
   
       
-    <div
+    
+    
+  </div >
+  <div style="clear:both"></div>
+
+  <div
        #inside="cdkDropList"
         [cdkDropListConnectedTo]="[main]"
         class="inside"
         cdkDropList 
         (cdkDropListEntered)="enteredInside($event)"
-     
+     [cdkDropListEnterPredicate]="predicate"
         (cdkDropListDropped)="fuck()"
       >  
     </div > 
-    
-  </div >
-  <div style="clear:both"></div>
     

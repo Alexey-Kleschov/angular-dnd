@@ -49,19 +49,23 @@ isShowSec = false;
   getDrop(event:any){
     console.log('GET DROPPPPP');
     this.eventBadge = event;
-    console.log(this.eventBadge);
+    // console.log(this.eventBadge);
   }
   getData(event:any) {
     // console.log(event)
   }
   fuck() {
-    console.log('fuck');
+    console.log('YEEEEEEAAAAAAAAHHHHHHHHHHHHH!!!!');
   }
   dragEnter2(){
     console.log('drag in sec block');
   }
   enteredInside() {
     console.log('enter inside');
+  }
+
+  predicate() {
+    return true;
   }
 
 }
