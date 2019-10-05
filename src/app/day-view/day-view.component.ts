@@ -15,17 +15,6 @@ export class DayViewComponent implements OnInit {
 
   eventBadge: any;
 
-
-  public todo = [
-  { title: 'Get to work', dateAdded: new Date().toString() },
-  { title: 'Pick up groceries', dateAdded: new Date().toString() },
-  ];
-
-  public done = [
-  { title: 'Get up', dateAdded: new Date().toString() },
-  { title: 'Brush teeth', dateAdded: new Date().toString() },
-];
-
 isShowSec = false;
 
 
@@ -49,7 +38,7 @@ isShowSec = false;
   getDrop(event:any){
     console.log('GET DROPPPPP');
     this.eventBadge = event;
-    // console.log(this.eventBadge);
+    console.log(this.eventBadge);
   }
   getData(event:any) {
     // console.log(event)
