@@ -26,8 +26,12 @@ newItems = [
   ]
 
   public badgeDrop() {
-    // console.log("badgeDrop inside");
+    console.log("emit");
     this.newItemsData.emit(this.newItems);
+  }
+
+  public check() {
+    console.log('check');
   }
 
 }
