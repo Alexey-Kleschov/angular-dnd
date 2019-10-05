@@ -11,10 +11,10 @@
   <app-badge
       cdkDrag
       *ngFor="let i of [1,2,3]"
-      [eventBadge] = "eventBadge"
       [cdkDragData]="eventBadge"
       (cdkDragDropped)="getDrop($event)"
-      (badge)="badgeDrop($event)"
+   
+      [eventBadge] = "eventBadge"
       (newItemsData)="getData($event)"
   ></app-badge>
   <div style="clear:both"></div>

@@ -19,8 +19,10 @@ isShowSec = false;
 
 
   drop(event:any) {
-    // console.log(event);
+    
     console.log('main dropped');
+    this.eventBadge = event.item.data;
+    console.log(this.eventBadge);
   }
 
   entered(event:any) {
@@ -42,6 +44,7 @@ isShowSec = false;
   }
   getData(event:any) {
     // console.log(event)
+    this.eventBadge = event;
   }
   fuck() {
     console.log('YEEEEEEAAAAAAAAHHHHHHHHHHHHH!!!!');

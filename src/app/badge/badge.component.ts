@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angu
 })
 export class BadgeComponent implements OnInit {
 @Input() eventBadge;
-@Output() badge = new EventEmitter();
+
 @Output() newItemsData = new EventEmitter();
   constructor() { }
 
